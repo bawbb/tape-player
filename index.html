@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+
+        <title>HTML Tape Player</title>
+        <meta name="description" content="" />
+        <meta name="author" content="Eric Warren Ainley" />
+
+        <meta name="viewport" content="width=500, user-scalable=0" />
+
+        <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="stylesheet" href="css/tapeplayer/TapePlayer.css" />
+        
+        <style>
+        
+            html, body {
+                font-family: Helvetica, Arial, sans-serif;
+                color: #393a37;
+                font-size: 12px;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            }
+            .tape {
+                margin: 50px auto;
+            }
+                
+        </style>
+        
+    </head>
+
+    <body>
+        
+        <section id="tapes-section">
+            
+            <!-- tape container -->
+            <div class="tape">
+                <!-- tapes background image -->
+                <img class="tape-cover" alt="Album Cover" title="Haute f'Aurts" src="records/HauteFaurts/cover-hautefaurts.jpg" />
+                <!-- tapes title -->
+                <h1 class="tape-name">Haute f'Aurts</h1>
+                <!-- tapes sub title -->
+                <h3 class="tape-date">August 2012</h3>
+                <!-- list of mp3 tracks -->
+                <ol class="tape-tracks">
+                    <li><a href="records/HauteFaurts/Vicidomini-Hautef'Aurts_05.mp3" type="audio/mp3">Like Chicken Night In Turkey</a></li>
+                    <li><a href="records/HauteFaurts/Vicidomini-Hautef'Aurts_04.mp3" type="audio/mp3">Which Door Leads To The Safe?</a></li>
+                    <li><a href="records/HauteFaurts/Vicidomini-Hautef'Aurts_03.mp3" type="audio/mp3">When In Doubt, Get The Fuck Out</a></li>
+                    <li><a href="records/HauteFaurts/Vicidomini-Hautef'Aurts_01.mp3" type="audio/mp3">Good Junk</a></li>
+                </ol>
+            </div>
+
+            <!-- tape two -->
+            <div class="tape">
+                <img class="tape-cover" alt="Album Cover" title="Chopin Shorter" src="records/ChopinShorter/cover-chopshot.png" />
+                <h1 class="tape-name">Chopin Shorter</h1>
+                <h3 class="tape-date">April 2013</h3>
+                <ol class="tape-tracks">
+                    <li><a href="records/ChopinShorter/Vicidomini-ChopinShorter.mp3" type="audio/mp3">Revolutionary Footprints</a></li>
+                    <li><a href="records/HauteFaurts/Vicidomini-Hautef'Aurts_02.mp3" type="audio/mp3">Sonorous For Four</a></li>
+                    <li><a href="records/ChopinShorter/AinleyBros-FiveFourOof.mp3" type="audio/mp3">Some other random shit in 5/4</a></li>
+                </ol>
+            </div>
+
+            <!-- tape three -->
+            <div class="tape">
+                <img class="tape-cover" alt="Album Cover" title="The Mystery Hour" src="records/MysteryHour/cover-mysteryhour.jpg" />
+                <h1 class="tape-name">The Mystery Hour</h1>
+                <h3 class="tape-date">April 2010</h3>
+                <ol class="tape-tracks">
+                    <li><a href="records/MysteryHour/Vicidomini-MysteryHour_01.mp3" type="audio/mp3">Magic, The Darkest Kind. My Soul Swims In It.</a></li>
+                    <li><a href="records/MysteryHour/Vicidomini-MysteryHour_02.mp3" type="audio/mp3">It's All In The Reflexes</a></li>
+                    <li><a href="records/MysteryHour/Vicidomini-MysteryHour_03.mp3" type="audio/mp3">We Really Shook The Pillars Of Hell, Didn't We?</a></li>
+                </ol>
+            </div>
+            
+            <!-- etc etc, as many tapes as you want, they share the same static player controls -->
+            
+        </section>
+        
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+        <script src="http://code.createjs.com/createjs-2013.02.12.min.js"></script>
+        <script src="js/tapeplayer/TapePlayer.js"></script>
+        
+        <script>
+        
+            // init each tape player with contructor (using jquery in this example)
+            $( ".tape" ).each( function( i ) {
+                var tapePlayer = new TapePlayer(this);
+            });
+            
+        </script>
+    </body>
+</html>
