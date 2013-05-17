@@ -1,0 +1,118 @@
+/*
+ * TapePlayer.css
+ * @author Eric Warren Ainley
+ * 
+ */
+
+.tape {
+    position: relative;
+    width: 400px;
+    height: 260px;
+    overflow: hidden;
+}
+	.tape .tape-case {
+	    position: absolute;
+	    left: 0px;
+	    top: 0px;
+	    width: 400px;
+	    height: 260px;
+	    pointer-events: none;
+	    background: url('tapecase.png') no-repeat;
+	}
+		.tape .tape-case .tape-wheels {
+	        position: absolute;
+	        background: url('tapecase-center.png') no-repeat;
+	        width: 240px;
+	        height: 65px;
+	        left: 80px;
+	        top: 90px;
+	    }
+	    	.tape .tape-case .tape-buffering {
+	    		position: relative;
+	    		top: 20px;
+	    		padding: 6px 12px;
+	    		font-size: 14px;
+	    		text-align: center;
+	    		background-color: #393A37;
+	    		color: #fff;
+	    	}
+	        .tape .tape-case .tape-wheels .tape-wheel {
+	        	position: absolute;
+	        	top: 3px;
+	        	background: url('tapecase-wheel.png') no-repeat;
+	        	width: 58px;
+	        	height: 58px;
+	        }
+	        .tape .tape-case .tape-wheels .tape-wheel.wheel-left { left: 3px; }
+	        .tape .tape-case .tape-wheels .tape-wheel.wheel-right { right: 3px; }
+	
+	.tape .tape-content {
+	    position: relative;
+	    left: 0px;
+	    width: 800px;
+	    height: 260px;
+	    text-align: left;
+	    background-color: #fff;
+	} .tape .tape-content.open {
+		left: -400px; /* where the content should be on hover */
+	}
+	    .tape .tape-content .tape-cover {
+	    	position: absolute;
+	        width: 400px;
+	        height: 260px;
+	    }
+	    
+        .tape .tape-content ol {
+        	position: absolute;
+        	width: 360px;
+        	left: 420px;
+        	top: 22px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+            z-index: 1; /*bring the ol up, so pointer events work, the pointer-events: none; on .tape-case is not standard */
+        }
+        
+        .tape .tape-content ol li {
+            display: inline-block;
+            margin: 4px 0;
+        }
+        
+        .tape .tape-content ol li a {
+        	font-size: 12px;
+        	color: #fff;
+        	padding: 2px 4px;
+        	margin: 0;
+        	background-color: #393a37;
+        	text-decoration: none;
+        	cursor: pointer;
+        } .tape .tape-content > ol > li a:hover {
+        	color: #393a37;
+        	background-color: #fff;
+        }
+        
+        .tape .tape-content .tape-name {
+        	position: absolute;
+        	left: 436px;
+        	bottom: 65px;
+            font-size: 32px;
+            font-weight: bold;
+            text-align: left;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .tape .tape-content .tape-date {
+        	position: absolute;
+        	right: 34px;
+        	bottom: 70px;
+        	margin: 0;
+            padding: 0;
+            text-align: right;
+            font-style: italic;
+            font-weight: normal;
+            font-size: 12px;
+        }
+        
+
