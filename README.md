@@ -1,5 +1,8 @@
 HTML Tape Player component thing.
 
+working example here:
+http://supersalty.us/tape-player/
+
 here's some example html:
 ```html
 <!-- tape container -->
