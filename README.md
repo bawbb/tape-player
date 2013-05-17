@@ -1,5 +1,6 @@
 HTML Tape Player component thing.
-Takes this html:
+
+here's some example html:
 ```html
 <!-- tape container -->
 <div class="tape">
@@ -17,6 +18,15 @@ Takes this html:
         <li><a href="records/HauteFaurts/Vicidomini-Hautef'Aurts_01.mp3" type="audio/mp3">Good Junk</a></li>
     </ol>
 </div>
+```
+
+and here's the example javascript constructor to point at that html.
+using jquery right now, just for rapid prototyping's sake:
+```javascript
+// init each tape player with contructor (using jquery in this example)
+$( ".tape" ).each( function( i ) {
+    var tapePlayer = new TapePlayer(this);
+});
 ```
 wraps some elements round it to look like a cassette player with a track listing.
 wheels spin and make "tape sounds" while buffering the audio element.
